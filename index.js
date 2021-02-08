@@ -44,8 +44,9 @@ $(".send").click(function () {
         var bmi = calculateBmi(vekt, høyde);
 
         // show name and bmi in html
-        var str = fullName + "´s" + " BMI er " + bmi;
-        $(".resultat").html(str);
+        var str = fullName + "´s" + " BMI er " + bmi + "<br>";
+
+        $(".resultat").append(str);
 
         reset();
         $(".resultat-cointainer").removeClass('d-none');
