@@ -50,6 +50,7 @@ $(".send").click(function () {
 
         reset();
         $(".resultat-cointainer").removeClass('d-none');
+
     }
     else {
         $(".error-container").removeClass('d-none');
@@ -64,6 +65,11 @@ $(".send").click(function () {
 $(".reset").click(function () {
     reset();
     resetError();
+})
+
+$(".clear").click(function () {
+    $(".resultat").html('');
+    $(".resultat-cointainer").addClass('d-none');
 })
 
 function concate(param1, param2, concatOption) {
