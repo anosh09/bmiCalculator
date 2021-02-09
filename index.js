@@ -43,6 +43,18 @@ $(".send").click(function () {
         // calculate bmi and store it in a variable
         var bmi = calculateBmi(vekt, høyde);
 
+        if (bmi < 18.5) {
+            bmi = bmi + ", det betyr at du er undervektig.";
+        }
+
+        else if (bmi >= 18.5 && bmi <= 24.9) {
+            bmi = bmi + ", det betyr at du har en normal vekt.";
+        }
+
+        else if (bmi > 24.9) {
+            bmi = bmi + ", det betyr at du er overvektig.";
+        }
+
         // show name and bmi in html
         var str = fullName + "´s" + " BMI er " + bmi + "<br>";
 
